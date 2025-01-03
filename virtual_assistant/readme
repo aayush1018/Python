@@ -1,0 +1,9 @@
+A sample code for the virtual_assistant. The virtual assistant can perform following functions
+a) Create Reminders
+b) Update existing reminders
+c) Delete reminders through id or text
+d) View reminders
+e) Open applications for user in desktop or browser
+f) Search wikipedia
+
+Note - This is a work in progress model and differs from the actual code.
