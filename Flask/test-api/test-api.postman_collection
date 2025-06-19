@@ -1,0 +1,503 @@
+{
+	"info": {
+		"_postman_id": "d3b56a52-1618-46c9-a411-4826e4968a27",
+		"name": "Flask Practice Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "45711364",
+		"_collection_link": "https://aayush-6593701.postman.co/workspace/Aayush's-Workspace~63795828-a2cc-4df1-83dc-0fb0d630d574/collection/45711364-d3b56a52-1618-46c9-a411-4826e4968a27?action=share&source=collection_link&creator=45711364"
+	},
+	"item": [
+		{
+			"name": "Hello World",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Simple_route",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/simple_route",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"simple_route"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "error_not_found",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/error_not_found",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"error_not_found"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "query_parameters",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/parameters?name=Test&age=20",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"parameters"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Test"
+						},
+						{
+							"key": "age",
+							"value": "20"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "uri_paramaters",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/url_variables/Test/20",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"url_variables",
+						"Test",
+						"20"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/planets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"planets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register_user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "API_DEMO@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "first_name",
+							"value": "Test2",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "Test2",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "qwerty",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "auth_user (Using Form Data)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "test@gmail.com",
+							"description": "Use correct email for success, you can check in the DB for correct values",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "A@BcD",
+							"description": "Use correct password for success, you can check in the DB for correct values",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "auth_user (Using JSON)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"test@gmail.com\",\r\n    \"password\": \"A@BcD12\"\r\n}\r\n\r\n//use incorrect email or password for failure",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "retrieve_password",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/retrieve_password/API1_DEMO@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"retrieve_password",
+						"API1_DEMO@gmail.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "planet_details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/planet_details/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"planet_details",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add_planet",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{JWT_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "planet_name",
+							"value": "pluto",
+							"type": "text"
+						},
+						{
+							"key": "planet_type",
+							"value": "Class K",
+							"type": "text"
+						},
+						{
+							"key": "mass",
+							"value": "234134e3",
+							"type": "text"
+						},
+						{
+							"key": "radius",
+							"value": "34.3e3",
+							"type": "text"
+						},
+						{
+							"key": "distance",
+							"value": "40.3e10",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/add_planet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"add_planet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{JWT_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "planet_id",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "planet_name",
+							"value": "Mars",
+							"type": "text"
+						},
+						{
+							"key": "planet_type",
+							"value": "class K",
+							"type": "text"
+						},
+						{
+							"key": "mass",
+							"value": "123e12",
+							"type": "text"
+						},
+						{
+							"key": "radius",
+							"value": "65.2e7",
+							"type": "text"
+						},
+						{
+							"key": "distance",
+							"value": "12.3e9",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/update_planet/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"update_planet",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{JWT_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "planet_id",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "planet_name",
+							"value": "Mars",
+							"type": "text"
+						},
+						{
+							"key": "planet_type",
+							"value": "class K",
+							"type": "text"
+						},
+						{
+							"key": "mass",
+							"value": "123e12",
+							"type": "text"
+						},
+						{
+							"key": "radius",
+							"value": "65.2e7",
+							"type": "text"
+						},
+						{
+							"key": "distance",
+							"value": "12.3e9",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/delete_planet/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"delete_planet",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "JWT_TOKEN",
+			"value": "",
+			"type": "default"
+		}
+	]
+}
