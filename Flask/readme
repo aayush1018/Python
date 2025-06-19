@@ -1,1 +1,1 @@
-
+This demo project provides a basic introduction to Flask, demonstrating how to create and test API endpoints using Postman. It also includes examples of securing specific endpoints using JWT tokens for authentication. The repository contains both the sample code and the Postman collection used for testing.
